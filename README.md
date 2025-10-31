@@ -18,3 +18,4 @@ This (unofficial) app acts as a webview wrapper for [chat.openai.com](https://ch
 ## Installation
 
 Download the latest release and install it on your device.
+# studious-fortnight
