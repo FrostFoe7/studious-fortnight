@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+drawable gpt_icon_background
+drawable splash_icon
+id swipeRefreshLayout
+id webView
+layout activity_main
+layout splash_screen
+mipmap gpt_icon
+mipmap gpt_icon_foreground
+mipmap gpt_icon_round
+string app_name

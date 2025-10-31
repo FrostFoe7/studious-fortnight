@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.0.0" type="incidents">
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                dot="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/splash_screen.xml"
+            line="8"
+            column="6"
+            startOffset="277"
+            endLine="8"
+            endColumn="15"
+            endOffset="286"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="28"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/gpt_icon.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="248"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive roundIcon is missing a monochrome tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/gpt_icon_round.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="248"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="33"
+            replacement="36"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="14"
+            column="9"
+            startOffset="305"
+            endLine="14"
+            endColumn="21"
+            endOffset="317"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.10.0 is available: 1.17.0">
+        <fix-replace
+            description="Change to 1.17.0"
+            family="Update versions"
+            oldString="1.10.0"
+            replacement="1.17.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="20"
+            startOffset="1137"
+            endLine="51"
+            endColumn="51"
+            endOffset="1168"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="52"
+            column="20"
+            startOffset="1188"
+            endLine="52"
+            endColumn="56"
+            endOffset="1224"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.8.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.13.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="53"
+            column="20"
+            startOffset="1244"
+            endLine="53"
+            endColumn="64"
+            endOffset="1288"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="54"
+            column="20"
+            startOffset="1308"
+            endLine="54"
+            endColumn="70"
+            endOffset="1358"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_NoActionBar`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/splash_screen.xml"
+            line="5"
+            column="5"
+            startOffset="199"
+            endLine="5"
+            endColumn="46"
+            endOffset="240"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/splash_icon.png` in densityless folder">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/splash_icon.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `gpt_icon.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/gpt_icon.png: 400x400 dp (600x600 px), mipmap-mdpi/gpt_icon.png: 600x600 dp (600x600 px), mipmap-xhdpi/gpt_icon.png: 300x300 dp (600x600 px), mipmap-xxhdpi/gpt_icon.png: 200x200 dp (600x600 px), mipmap-xxxhdpi/gpt_icon.png: 150x150 dp (600x600 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/gpt_icon.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `gpt_icon_foreground.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/gpt_icon_foreground.png: 400x400 dp (600x600 px), mipmap-mdpi/gpt_icon_foreground.png: 600x600 dp (600x600 px), mipmap-xhdpi/gpt_icon_foreground.png: 300x300 dp (600x600 px), mipmap-xxhdpi/gpt_icon_foreground.png: 200x200 dp (600x600 px), mipmap-xxxhdpi/gpt_icon_foreground.png: 150x150 dp (600x600 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/gpt_icon_foreground.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: splash_icon.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/gpt_icon_foreground.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/gpt_icon.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/splash_icon.png"/>
+    </incident>
+
+</incidents>

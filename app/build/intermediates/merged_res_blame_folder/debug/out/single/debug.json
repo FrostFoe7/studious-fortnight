@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-hdpi_gpt_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-hdpi/gpt_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxxhdpi_gpt_icon_foreground.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxxhdpi/gpt_icon_foreground.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xhdpi_gpt_icon_round.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xhdpi/gpt_icon_round.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxhdpi_gpt_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxhdpi/gpt_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/drawable_gpt_icon_background.xml.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/drawable/gpt_icon_background.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-mdpi_gpt_icon_foreground.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-mdpi/gpt_icon_foreground.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/layout_activity_main.xml.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-hdpi_gpt_icon_round.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-hdpi/gpt_icon_round.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxxhdpi_gpt_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxxhdpi/gpt_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-hdpi_gpt_icon_foreground.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-hdpi/gpt_icon_foreground.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-anydpi-v26_gpt_icon_round.xml.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-anydpi-v26/gpt_icon_round.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-anydpi-v26_gpt_icon.xml.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-anydpi-v26/gpt_icon.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/drawable_splash_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/drawable/splash_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-mdpi_gpt_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-mdpi/gpt_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-mdpi_gpt_icon_round.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-mdpi/gpt_icon_round.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/layout_splash_screen.xml.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/layout/splash_screen.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xhdpi_gpt_icon.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xhdpi/gpt_icon.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxhdpi_gpt_icon_round.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxhdpi/gpt_icon_round.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxxhdpi_gpt_icon_round.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxxhdpi/gpt_icon_round.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xxhdpi_gpt_icon_foreground.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xxhdpi/gpt_icon_foreground.png"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-merged_res-51:/mipmap-xhdpi_gpt_icon_foreground.png.flat",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/mipmap-xhdpi/gpt_icon_foreground.png"
+    }
+]

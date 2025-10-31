@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-mergeDebugResources-50:/layout/splash_screen.xml",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/layout/splash_screen.xml"
+    },
+    {
+        "merged": "com.matthaigh27.chatgptwrapper.app-mergeDebugResources-50:/layout/activity_main.xml",
+        "source": "com.matthaigh27.chatgptwrapper.app-main-53:/layout/activity_main.xml"
+    }
+]

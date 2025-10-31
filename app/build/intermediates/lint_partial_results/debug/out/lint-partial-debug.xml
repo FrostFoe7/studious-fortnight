@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.0.0" type="partial_results">
+    <map id="NotificationPermission">
+        <entry
+            name="className"
+            string="com/onesignal/notifications/internal/badges/impl/shortcutbadger/impl/XiaomiHomeBadger"/>
+        <location id="class"
+            file="$GRADLE_USER_HOME/caches/transforms-3/bb14a626b847300fa05451059ee4188f/transformed/notifications-5.4.0/jars/classes.jar"/>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.mipmap.gpt_icon_foreground"
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/gpt_icon_foreground.png"/>
+        <location id="R.drawable.gpt_icon_background"
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/gpt_icon_background.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="170"
+            endColumn="10"
+            endOffset="5605"/>
+        <entry
+            name="model"
+            string="drawable[splash_icon(U),gpt_icon_background(D)],id[swipeRefreshLayout(U),webView(U)],layout[activity_main(U),splash_screen(U)],mipmap[gpt_icon_round(U),gpt_icon(U),gpt_icon_foreground(D)],string[app_name(U)],style[Theme_AppCompat_NoActionBar(R),Theme_AppCompat(R)];5^0,6^0,7^0;;;"/>
+    </map>
+
+</incidents>

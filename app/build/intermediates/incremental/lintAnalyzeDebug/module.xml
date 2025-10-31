@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/workspaces/codespaces-blank/ChatGPT-android-app/app"
+    name=":app"
+    type="APP"
+    maven="ChatGPT:app:"
+    agpVersion="8.0.0"
+    buildFolder="build"
+    bootClassPath="/workspaces/codespaces-blank/android-sdk/platforms/android-33/android.jar:/workspaces/codespaces-blank/android-sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-33">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

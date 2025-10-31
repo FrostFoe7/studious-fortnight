@@ -1,0 +1,203 @@
+/workspaces/codespaces-blank/ChatGPT-android-app/app/build.gradle:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 33
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/AndroidManifest.xml:11: Warning: Attribute enableOnBackInvokedCallback is only used in API level 33 and higher (current min is 28) [UnusedAttribute]
+        android:enableOnBackInvokedCallback="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/java/com/matthaigh27/chatgptwrapper/SplashScreenActivity.kt:8: Warning: The application should not provide its own launch screen [CustomSplashScreen]
+class SplashScreenActivity : AppCompatActivity() {
+      ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CustomSplashScreen":
+   Starting in Android 12 (API 31+), the application's Launch Screen is
+   provided by the system and the application should not create its own,
+   otherwise the user will see two splashscreens. Please check the
+   SplashScreen class to check how the Splash Screen can be controlled and
+   customized.
+
+   https://developer.android.com/guide/topics/ui/splash-screen
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/build.gradle:51: Warning: A newer version of androidx.core:core-ktx than 1.10.0 is available: 1.17.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.10.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/codespaces-blank/ChatGPT-android-app/app/build.gradle:52: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/codespaces-blank/ChatGPT-android-app/app/build.gradle:53: Warning: A newer version of com.google.android.material:material than 1.8.0 is available: 1.13.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.8.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/codespaces-blank/ChatGPT-android-app/app/build.gradle:54: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/layout/splash_screen.xml:5: Warning: Possible overdraw: Root element paints background @android:color/white with a theme that also paints a background (inferred theme is @style/Theme_AppCompat_NoActionBar) [Overdraw]
+    android:background="@android:color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/drawable/gpt_icon_background.xml:2: Warning: The resource R.drawable.gpt_icon_background appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-hdpi/gpt_icon_foreground.png: Warning: The resource R.mipmap.gpt_icon_foreground appears to be unused [UnusedResources]
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-anydpi-v26/gpt_icon.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-anydpi-v26/gpt_icon_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-xxxhdpi/gpt_icon.png: Warning: The image gpt_icon.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/gpt_icon.png: 400x400 dp (600x600 px), mipmap-mdpi/gpt_icon.png: 600x600 dp (600x600 px), mipmap-xhdpi/gpt_icon.png: 300x300 dp (600x600 px), mipmap-xxhdpi/gpt_icon.png: 200x200 dp (600x600 px), mipmap-xxxhdpi/gpt_icon.png: 150x150 dp (600x600 px) [IconDipSize]
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-xxxhdpi/gpt_icon_foreground.png: Warning: The image gpt_icon_foreground.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/gpt_icon_foreground.png: 400x400 dp (600x600 px), mipmap-mdpi/gpt_icon_foreground.png: 600x600 dp (600x600 px), mipmap-xhdpi/gpt_icon_foreground.png: 300x300 dp (600x600 px), mipmap-xxhdpi/gpt_icon_foreground.png: 200x200 dp (600x600 px), mipmap-xxxhdpi/gpt_icon_foreground.png: 150x150 dp (600x600 px) [IconDipSize]
+
+   Explanation for issues of type "IconDipSize":
+   Checks the all icons which are provided in multiple densities, all compute
+   to roughly the same density-independent pixel (dip) size. This catches
+   errors where images are either placed in the wrong folder, or icons are
+   changed to new sizes but some folders are forgotten.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/drawable/splash_icon.png: Warning: Found bitmap drawable res/drawable/splash_icon.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/mipmap-xxxhdpi/gpt_icon_foreground.png: Warning: The following unrelated icon files have identical contents: splash_icon.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png, gpt_icon.png, gpt_icon_foreground.png [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+/workspaces/codespaces-blank/ChatGPT-android-app/app/src/main/res/layout/splash_screen.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+0 errors, 18 warnings

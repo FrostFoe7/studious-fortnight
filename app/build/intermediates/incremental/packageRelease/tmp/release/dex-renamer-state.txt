@@ -1,0 +1,4 @@
+#Fri Oct 31 15:29:25 UTC 2025
+base.0=/workspaces/codespaces-blank/ChatGPT-android-app/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
